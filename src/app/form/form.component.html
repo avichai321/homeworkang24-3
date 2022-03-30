@@ -7,39 +7,39 @@
 <p><input type="text" ngModel name="LastName" placeholder="Enter your LastName"></p>
 <h3>One piece:</h3>
 <h4>1.Where was Gol D. Roger born?</h4>
-<input type="radio" ngModel name="opqa1" value="10" (change)="addcorrect()">
-<label for="Correct">East Blue</label><br>
-<input type="radio" ngModel name="opqa1" value="0">
-<label for="Wrong" >North Blue</label><br>
-<input type="radio" ngModel name="opqa1" value="0">
-<label for="Wrong">New World</label><br>
+<input type="radio"  ngModel name="opa1" value="10" (change)="answerResult(points.Correct)"/>
+<label >East Blue</label><br>
+<input type="radio"  ngModel name="opa1" value="20" (change)="answerResult(points.wrong)" >
+<label >North Blue</label><br>
+<input type="radio"  ngModel name="opa1" value="30" (change)="answerResult(points.wrong)">
+<label>New World</label><br>
 <h4>2.Which of the following is not a type of Haki?</h4>
-<input type="radio" ngModel name="opqa2" value= 0>
+<input type="radio" ngModel name="opa2" value="20" (change)="answerResult(points.wrong)">
 <label for="Wrong" >Haoshoku - Conquerer's</label><br>
-<input type="radio" ngModel name="opqa2" value="10" (change)="addcorrect()">
+<input type="radio"  ngModel name="opa2" value="10" (change)="answerResult(points.Correct)">
 <label for="Correct">Kamishoku - Divinity</label><br>
-<input type="radio" ngModel name="opqa2" value="0">
+<input type="radio"  ngModel name="opa2" value="30" (change)="answerResult(points.wrong)">
 <label for="Wrong">Kenbunshoku - Observation</label><br>
 <h4>3.Which 'One Piece' character is the cook for the Straw Hat Pirates who uses his feet to attack and has a weakness for beautiful women?</h4>
-<input type="radio" ngModel name="opqa3" value= "0">
+<input type="radio"   ngModel name="opa3" value= "20" (change)="answerResult(points.wrong)">
 <label for="Wrong">Luffy</label><br>
-<input type="radio" ngModel name="opqa3" value="10" (change)="addcorrect()">
+<input type="radio"   ngModel name="opa3" value="10" (change)="answerResult(points.Correct)">
 <label for="Correct">Sanji</label><br>
-<input type="radio" ngModel name="opqa3" value="0">
+<input type="radio"   ngModel name="opa3" value="30" (change)="answerResult(points.wrong)">
 <label for="Wrong">Brook</label><br>
 <h4>4.From which type of wood did Franky make Thousand Sunny?</h4>
-<input type="radio" ngModel name="opqa4" value= "10" (change)="addcorrect()">
+<input type="radio"   ngModel name="opa4" value= "10" (change)="answerResult(points.Correct)">
 <label for="Correct">Adam Wood</label><br>
-<input type="radio" ngModel name="opqa4" value="0">
+<input type="radio"   ngModel name="opa4" value="20" (change)="answerResult(points.wrong)">
 <label for="Wrong">Sunlight Wood</label><br>
-<input type="radio" ngModel name="opqa4" value="0">
+<input type="radio"   ngModel name="opa4" value="30" (change)="answerResult(points.wrong)">
 <label for="Wrong">Tom Wood</label><br>
 <h4>5.Other than the All Blue, what was Sanji's dream, which was destroyed, as revealed in the Thriller Bark Arc?</h4>
-<input type="radio" ngModel name="opqa5" value= "0">
+<input type="radio"   ngModel name="opa5" value= "20" (change)="answerResult(points.wrong)">
 <label ffor="Wrong">To eat a devil's fruit that would make him irresistible to women</label><br>
-<input type="radio" ngModel name="opqa5" value="0">
+<input type="radio"   ngModel name="opa5" value="30" (change)="answerResult(points.wrong)">
 <label for="Wrong">To sail on a ship as large as the Thriller Bark</label><br>
-<input type="radio" ngModel name="opqa5" value="10" (change)="addcorrect()">
+<input type="radio"   ngModel name="opa5" value="10" (change)="answerResult(points.Correct)">
 <label for="Wrong">To eat a devil's fruit that would make him invisible</label><br>
 <br><button type="submit">submit form</button>
 

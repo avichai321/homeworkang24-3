@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { sortans } from './sortans';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit, Optional } from '@angular/core';
+import { ansOptions } from './ansOptions';
+import { FormsModule ,NgForm , NgModel,ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -13,20 +13,36 @@ export class FormComponent implements OnInit {
   }
   
   
-  
   ngOnInit(): void {
     
-  }
+    
+  } 
+  
   total:number=0;
-  calcans=sortans;
+  points=ansOptions
   
   
-  addcorrect(){
-    this.total += this.calcans.Correct;
-    console.log(this.total)
+  answerResult(opa :ansOptions){ 
+    switch(opa){
+      case ansOptions.wrong:
+        if ( this.total != 0){
+          this.total += this.points.wrong;
+          console.log(this.total)
+        }
+        break;
+      case ansOptions.Correct:
+      this.total += this.points.Correct;
+      console.log(this.total)
+      break;
+    }
+    
+      
+    
   }
-  submitfor(opform:any){
+   
+  submitfor(form: any){
 
   }
+   }
 
-}
+
