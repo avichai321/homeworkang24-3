@@ -1,7 +1,7 @@
-<h1 [style.color]="'red'">Anime one piece questions</h1>
-<h1>lets see how much you love One piece!</h1>
+<h1 >Anime one piece questions</h1>
+<h1 [hidden]="formHidden">lets see how much you love One piece!</h1>
 
-<form #animeForm = "ngForm" (submit)="submitfor(animeForm.value)">
+<form [hidden]="formHidden" #animeForm = "ngForm" (submit)="submitfor(animeForm.value)">
 <p><input type="text" ngModel name="firstName" placeholder="Enter your firstname"></p>
 
 <p><input type="text" ngModel name="LastName" placeholder="Enter your LastName"></p>
@@ -42,9 +42,11 @@
 <input type="radio"   ngModel name="opa5" value="10" (change)="answerResult(points.Correct)">
 <label for="Wrong">To eat a devil's fruit that would make him invisible</label><br>
 <br><button type="submit">submit form</button>
-
-
-
-
 </form>
+
+<div>
+    <h2 *ngIf="total<=20">What you are you doing!? go watch the episodes</h2>
+    <h2 *ngIf="total>20 && total<=40 ">you are good but not master</h2>
+    <h2 *ngIf="total==50">Im Proud of you</h2>
+</div>
 

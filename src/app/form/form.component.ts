@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
   
   total:number=0;
   points=ansOptions
-  
+  formHidden:boolean=false
   
   answerResult(opa :ansOptions){ 
     switch(opa){
