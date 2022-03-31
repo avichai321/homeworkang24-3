@@ -5,48 +5,71 @@
 <p><input type="text" ngModel name="firstName" placeholder="Enter your firstname"></p>
 
 <p><input type="text" ngModel name="LastName" placeholder="Enter your LastName"></p>
-<h3>One piece:</h3>
-<h4>1.Where was Gol D. Roger born?</h4>
-<input type="radio"  ngModel name="opa1" value="10" (change)="answerResult(points.Correct)"/>
-<label >East Blue</label><br>
-<input type="radio"  ngModel name="opa1" value="20" (change)="answerResult(points.wrong)" >
-<label >North Blue</label><br>
-<input type="radio"  ngModel name="opa1" value="30" (change)="answerResult(points.wrong)">
-<label>New World</label><br>
-<h4>2.Which of the following is not a type of Haki?</h4>
-<input type="radio" ngModel name="opa2" value="20" (change)="answerResult(points.wrong)">
-<label for="Wrong" >Haoshoku - Conquerer's</label><br>
-<input type="radio"  ngModel name="opa2" value="10" (change)="answerResult(points.Correct)">
-<label for="Correct">Kamishoku - Divinity</label><br>
-<input type="radio"  ngModel name="opa2" value="30" (change)="answerResult(points.wrong)">
-<label for="Wrong">Kenbunshoku - Observation</label><br>
-<h4>3.Which 'One Piece' character is the cook for the Straw Hat Pirates who uses his feet to attack and has a weakness for beautiful women?</h4>
-<input type="radio"   ngModel name="opa3" value= "20" (change)="answerResult(points.wrong)">
-<label for="Wrong">Luffy</label><br>
-<input type="radio"   ngModel name="opa3" value="10" (change)="answerResult(points.Correct)">
-<label for="Correct">Sanji</label><br>
-<input type="radio"   ngModel name="opa3" value="30" (change)="answerResult(points.wrong)">
-<label for="Wrong">Brook</label><br>
-<h4>4.From which type of wood did Franky make Thousand Sunny?</h4>
-<input type="radio"   ngModel name="opa4" value= "10" (change)="answerResult(points.Correct)">
-<label for="Correct">Adam Wood</label><br>
-<input type="radio"   ngModel name="opa4" value="20" (change)="answerResult(points.wrong)">
-<label for="Wrong">Sunlight Wood</label><br>
-<input type="radio"   ngModel name="opa4" value="30" (change)="answerResult(points.wrong)">
-<label for="Wrong">Tom Wood</label><br>
-<h4>5.Other than the All Blue, what was Sanji's dream, which was destroyed, as revealed in the Thriller Bark Arc?</h4>
-<input type="radio"   ngModel name="opa5" value= "20" (change)="answerResult(points.wrong)">
-<label ffor="Wrong">To eat a devil's fruit that would make him irresistible to women</label><br>
-<input type="radio"   ngModel name="opa5" value="30" (change)="answerResult(points.wrong)">
-<label for="Wrong">To sail on a ship as large as the Thriller Bark</label><br>
-<input type="radio"   ngModel name="opa5" value="10" (change)="answerResult(points.Correct)">
-<label for="Wrong">To eat a devil's fruit that would make him invisible</label><br>
+
+    <div>
+        <h4 class="p-3 mb-2 bg-secondary text-white" >1.Where was Gol D. Roger born?</h4>
+        <input class="form-check-input" type="radio" #opa1 ngModel name="opa1" value=10 >
+        <label class="form-check-label" >East Blue</label><br>
+        <input class="form-check-input" type="radio" #opa1 ngModel name="opa1" value=1 >
+        <label class="form-check-label" >North Blue</label><br>
+        <input class="form-check-input" type="radio" #opa1 ngModel name="opa1" value=3 >
+        <label class="form-check-label">New World</label><br>
+    </div>
+    <div>
+    <h4 class="p-3 mb-2 bg-secondary text-white">2.Which of the following is not a type of Haki?</h4>
+    <input class="form-check-input" type="radio" #opa2 ngModel name="opa2" value=1 >
+    <label class="form-check-label" >Haoshoku - Conquerer's</label><br>
+    <input class="form-check-input" type="radio"  #opa2 ngModel name="opa2" value=10 >
+    <label class="form-check-label" >Kamishoku - Divinity</label><br>
+    <input class="form-check-input" type="radio" #opa2 ngModel #opa3 name="opa2" value=3 >
+    <label class="form-check-label" >Kenbunshoku - Observation</label><br>
+    </div>
+
+    <div>
+<h4 class="p-3 mb-2 bg-secondary text-white">3.Which 'One Piece' character is the cook for the Straw Hat Pirates who uses his feet to attack and has a weakness for beautiful women?</h4>
+<input class="form-check-input" type="radio"   ngModel #opa3 name="opa3" value= 1 >
+<label class="form-check-label" >Luffy</label><br>
+<input class="form-check-input" type="radio" #opa3  ngModel name="opa3" value=10 >
+<label class="form-check-label" >Sanji</label><br>
+<input class="form-check-input" type="radio"  #opa3 ngModel name="opa3" value=3 >
+<label class="form-check-label" >Brook</label><br>
+</div>
+<h4 class="p-3 mb-2 bg-secondary text-white"> 4.From which type of wood did Franky make Thousand Sunny?</h4>
+<input class="form-check-input" type="radio" #opa4  ngModel name="opa4" value= 10 >
+<label class="form-check-label" >Adam Wood</label><br>
+<input class="form-check-input" type="radio"  #opa4 ngModel name="opa4" value=1 >
+<label>Sunlight Wood</label><br>
+<input class="form-check-input" type="radio"  #opa4 ngModel name="opa4" value=3 >
+<label class="form-check-label" >Tom Wood</label><br>
+<div>
+<h4 class="p-3 mb-2 bg-secondary text-white" >5.Other than the All Blue, what was Sanji's dream, which was destroyed, as revealed in the Thriller Bark Arc?</h4>
+<input class="form-check-input" type="radio" #opa5  ngModel name="opa5" value= 1 >
+<label class="form-check-label" >To eat a devil's fruit that would make him irresistible to women</label><br>
+<input class="form-check-input" type="radio"  #opa5 ngModel name="opa5" value=3>
+<label class="form-check-label" >To sail on a ship as large as the Thriller Bark</label><br>
+<input class="form-check-input" type="radio"  #opa5 ngModel name="opa5" value=10 >
+<label class="form-check-label" >To eat a devil's fruit that would make him invisible</label><br>
+</div>
 <br><button type="submit">submit form</button>
+
 </form>
 
 <div [hidden]="showResult">
-    <h2 *ngIf="total<=20">What you are you doing!? go watch the episodes</h2>
-    <h2 *ngIf="total>20 && total<=40 ">you are good but not master</h2>
-    <h2 *ngIf="total==50">Im Proud of you!</h2>
+    <div *ngIf="total<=20">
+        <h2 class="p-3 mb-2 bg-danger text-white" >{{formcal.firstName}} What you are you doing!? go watch the episodes</h2>
+        <img class="rounded float-start" src="https://imgix.ranker.com/user_node_img/83/1644445/original/1644445-photo-u64?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375" alt="">
+    </div>
+
+    <div *ngIf="total>20 && total<=40">
+        <h2 class="p-3 mb-2 bg-warning text-dark" > {{formcal.firstName}} you are good but not master</h2>
+      <img class="rounded float-start" src="https://media.comicbook.com/2020/11/one-piece-nami-luffy-pirate-king-belief-spoilers-manga-1245051.jpeg?auto=webp">
+    </div>
+   <div *ngIf="total==50">
+       <h2 class="p-3 mb-2 bg-success text-white" >{{formcal.firstName}} Im Proud of you!</h2>
+    <img class="rounded float-start" src="https://qph.cf2.quoracdn.net/main-qimg-99626072ac6863db8e86da0ab7830070-pjlq" alt="">
+   </div> 
+
+    <br><button (click)="handlesave()">Save your Result</button>
+    <br>
 </div>
 
