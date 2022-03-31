@@ -44,9 +44,9 @@
 <br><button type="submit">submit form</button>
 </form>
 
-<div>
+<div [hidden]="showResult">
     <h2 *ngIf="total<=20">What you are you doing!? go watch the episodes</h2>
     <h2 *ngIf="total>20 && total<=40 ">you are good but not master</h2>
-    <h2 *ngIf="total==50">Im Proud of you</h2>
+    <h2 *ngIf="total==50">Im Proud of you!</h2>
 </div>
 

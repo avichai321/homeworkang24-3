@@ -21,6 +21,7 @@ export class FormComponent implements OnInit {
   total:number=0;
   points=ansOptions
   formHidden:boolean=false
+  showResult:boolean = true
   
   answerResult(opa :ansOptions){ 
     switch(opa){
@@ -41,6 +42,9 @@ export class FormComponent implements OnInit {
   }
    
   submitfor(form: any){
+    this.formHidden=true;
+    this.showResult=false;
+
 
   }
    }
