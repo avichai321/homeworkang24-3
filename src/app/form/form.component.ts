@@ -1,5 +1,5 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import { ansOptions } from './ansOptions';
+
 import { FormsModule ,NgForm , NgModel,ReactiveFormsModule} from '@angular/forms';
 
 export interface qa{
