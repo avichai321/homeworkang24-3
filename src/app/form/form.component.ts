@@ -18,7 +18,6 @@ export class FormComponent implements OnInit {
     firstname:"",
   }
   total:number=0;
-  points=ansOptions
   formHidden:boolean=false
   showResult:boolean = true
   readonly quizResult_key = 'quiz result';
